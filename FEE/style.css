@@ -1,0 +1,591 @@
+.logo img{
+    height:6rem;   
+}
+body{
+    background-color: black;
+}
+.btn{
+   display: inline-block;
+   padding: .6rem 2rem;
+   font-size: 1.5rem;
+   color: burlywood;
+   background: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+.btn:hover{
+    letter-spacing: .2rem;
+}
+.header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1%;
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 900;
+}
+.header .navbar a{
+    margin: 10px;
+    font-size:22px;
+    color: white;
+    text-decoration: none;
+}
+.header .navbar a:hover{
+    color: burlywood;
+    border-bottom: 1px solid burlywood;
+    /* padding-bottom: .5rem; */
+}
+.header .icons i{
+    color:white;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.header .icons i:hover{
+    color:burlywood;
+}
+#menu-btn{
+    display: none;
+}
+.header .search-form{
+    position: absolute;
+    top:100%; right:7%;
+    background: white;
+    width: 22rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    /* search bar udaaya */
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.header .search-form.active{
+    transform: scaleY(1);
+
+}
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+.header .search-form label{
+    position: absolute;
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+
+}
+.header .search-form label:hover{
+    color:burlywood;
+}
+.header .cart-items-container img{
+    width: 150px; height: 90px;
+}
+.header .cart-items-container{
+    position: absolute;
+    top: 70%; right: -100%;
+    width: 25rem;
+    background: white;
+    padding: 0 1.5rem;
+}
+.header .cart-items-container.active{
+    right: 0;
+}
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin: 1.7rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.header .cart-items-container .cart-item .material-icons{
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.header .cart-items-container .cart-item .material-icons:hover{
+    color:burlywood;
+}
+.header .cart-items-container .btn{
+    width: 80%;
+    text-align: center;
+}
+.home{
+    min-height: 100vh;
+    margin-top: 13%;
+    background: url(Images/main_bg.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width:60rem;
+}
+
+.home .content h5{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color:burlywood;
+}
+
+.home .content p{
+    font-size: 1.2rem;
+    color:white;
+}
+
+.heading{
+    text-align: center;
+    color:white;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.heading span{
+    color:burlywood;
+    text-transform:uppercase;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+
+}
+
+.about .row .carousel{
+    margin-left: 25px;
+    height:40%;
+    width:40%;
+}
+
+.about .row content{
+    flex:1 1 15rem;
+    padding:1rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color:burlywood;
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+.about .row .content p{
+    font-size: 1.3rem;
+    color:beige;
+    margin-left: 25%;
+    line-height: 1.3;
+}
+
+.about .row .content .btn2{
+    padding:12px;
+    padding-right: 25px;
+    padding-left: 25px;
+    color:brown;
+    background-color: beige;
+    text-decoration: none;
+    margin-left: 50%;
+}
+
+.menu .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+    gap:1.5rem;
+    border:0.5px ridge #fff;
+}
+
+.menu .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border:0.5px ridge #ccc;
+}
+
+.menu .box-container .box .btn{
+    border:1px solid white;
+    background-color:antiquewhite;
+}
+
+.menu .box-container .box img{
+    height:10rem;
+}
+
+.menu .box-container .box h3{
+    color: #fff;
+    font-size:2rem;
+    padding : 1rem 0;
+}
+
+.menu .box-container .box .price{
+    color:#fff;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.menu .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.menu .box-container .box:hover{
+    background:#fff;
+}
+
+.menu .box-container .box:hover >*{
+    color:var(--black);
+}
+
+.products .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+    border:1px inset #ccc;
+}
+
+.products .box-container .box{
+    text-align: center;
+    border:var(--border);
+    padding: 2rem;
+    border:1px inset #ccc;
+}
+
+.products .box-container .box .icons a{
+    height:3rem;
+    width:3rem;
+    font-size: 2rem;
+    border:1px outset #ccc;
+    color:#fff;
+}
+
+.products .box-container .box .icons a:hover{
+    background: var(--main-color);
+}
+
+.products .box-container .box .image{
+    padding:2.5rem 0;
+}
+
+.products .box-container .box .image img{
+    height: 250px;
+    width:250px;
+}
+
+.products .box-container .box .content h3{
+    color:#fff;
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .stars{
+    padding:1.5rem;
+}
+
+.products .box-container .box .content .stars i{
+    font-size:1.7rem;
+}
+
+.products .box-container .box .content .price{
+    color:#fff;
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.review .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap:1.5rem;
+    border:1px inset #ccc;
+}
+
+.review .box-container .box{
+    border:val(--border);
+    text-align: center;
+    /* padding:3rem 2rem; */
+    border:1px inset #ccc;
+}
+
+.review .box-container .box p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color:#ccc;
+    margin: 0%;
+    /* padding:2rem 0; */
+}
+
+.review .box-container .box .user{
+    height:7rem;
+    width:7rem;
+    border-radius:50%;
+    object-fit: cover;
+}
+
+.review .box-container .box .quote{
+    width:100px;
+    height:fit-content;
+}
+
+.review .box-container .box h3{
+    /* padding:1rem 0; */
+    font-size: 2rem;
+    color:#fff;
+}
+
+.review .box-container .stars i{
+    height:10rem;
+    width:10rem;
+    font-size: 1.5rem;
+    color:var(--main-color);
+}
+
+.contact table{
+    margin-top: 50px;
+    width:70rem;
+}
+
+.contact .row{
+    display:flex;
+    background: var(--black);
+    flex-wrap:wrap;
+    gap:1rem;
+}
+
+.contact .row .map{
+    object-fit:cover;
+    max-width: 50rem;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size:3.5rem;
+    color:#fff;
+}
+
+.contact .row form .inputBox{
+    border:1px solid white;
+    display:flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background:var(--bg);
+    border:var(--border);
+}
+
+.contact .row form .inputBox span{
+    color:#fff;
+    font-size:2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+    width:100%;
+    padding:2rem;
+    font-size:1.7rem;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+
+.blogs .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap:1.5rem;
+}
+
+.blogs .box-container .box img{
+    height:15rem;
+    overflow:cover;
+    width:20rem;
+}
+
+.blogs .box-container .content p{
+    color: white;
+}
+
+.blogs .box-container .box:hover img{
+    transform: scale(1.2);
+}
+
+.blogs .box-container .box .content{
+    padding:2rem;
+}
+
+.blogs .box-container .content .title{
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 1.5;
+    color:#fff;
+}
+
+.blogs .box-container .box .content .title:hover{
+    color:var(--main-color);
+}
+
+.blogs .box-container .content span{
+    color:goldenrod;
+    display:block;
+    padding-top:1rem;
+    font-size:1.2rem;
+}
+
+.blogs .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:1rem 0;
+}
+
+.blogs .box-container .content .btn{
+    border:1px ridge #ccc;
+}
+
+.footer{
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .share{
+    padding: 1rem 0;
+}
+
+.footer .share a{
+    height:5rem;
+    width:5rem;
+    line-height: 5rem;
+    font-size:2rem;
+    color:#fff;
+    border:var(--border);
+    margin: 0.3em;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .links{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.7rem 2rem;
+    color:#fff;
+    border:var(--border);
+}
+
+.footer .links a:hover{
+    background: var(--main-color);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+
+/* media queries */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    
+    .header{
+        padding:1.5rem 2rem;
+    }
+    .products .box-container .box .image img{
+        width:197px;
+    }
+}
+
+@media(max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .about .row .image{
+        width: 300px;
+    }
+    .about .row .content{
+        width:500px;
+        margin-left: 75px;
+    }
+    .header .navbar{
+        position: absolute;
+        /* chupata sara home vla */ 
+        top:100%; right:-100%;
+        background: white;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    .header .navbar.active{
+        right:0;
+    }
+    .header .navbar a{
+        display: block;
+        margin: 1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+        color: black;
+    }
+    .header .search-form{
+        width: 100%;
+    }
+    .contact table .map{
+        width: 325px;
+        height: 412px;
+    }
+    .products .box .image{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h5{
+        font-size: 4.5rem;
+    }
+    .home .content p{
+        font-size: 1.5rem;
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+        width: 561px;
+    }
+    .home .content p{
+        font-size: 1.5rem;
+    }
+    .home{
+        background-position:left;
+        justify-content: center;
+        text-align: center;
+        width:550px;
+    }
+    
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+    
+}
